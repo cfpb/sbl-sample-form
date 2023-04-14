@@ -1,0 +1,933 @@
+<html lang="en">
+  <head>
+    <!--
+
+                  ad$$             $$
+                 d$"               $$
+                 $$                $$
+       ,adPYba,  $$$$$ $b,dPYba,   $$,dPYba,
+      aP'    '$: $$    $$P'   '$a  $$P'   '$a
+      $(         $$    $$(     )$  $$(     )$
+      "b,    ,$: $$    $$b,   ,$"  $$b,   ,$"
+       `"Ybd$"'  $$    $$`YbdP"'   $$`Ybd$"'
+                       $$
+                       $$
+                       ""
+
+      This file provides a sample HTML form that could be used
+      to collect demographic information from small business owners.
+
+      It uses code and design patterns from the U.S. Web Design System.
+      See https://designsystem.digital.gov/ for more information.
+
+      It is provided for the convenience of the industry and to help 
+      reduce development costs. It is not a substitute for otherwise 
+      following the requirements of the regulation, and covered financial 
+      institutions must make sure that all forms comply with the specific 
+      requirements of the small business lending rule.
+
+    -->
+    <meta charset="UTF-8" />
+    <title>Sample demographic form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uswds/3.4.1/css/uswds.min.css" integrity="sha512-nYgdbDiCeQ9s5EjMxfTPEr2jXvaWiH/U9IZ6vokGGS35xWxyGRVlyDTnk8XqrTFkWGCbWGEinaRB4dwCs8S7cQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      .usa-fieldset {
+        margin-top: 2rem;
+      }
+
+      .usa-legend--medium,
+      .usa-label--medium {
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+
+      .usa-prose .usa-collection__item {
+        margin-top: 2.5rem;
+        margin-bottom: 0;
+        padding-top: 3rem;
+      }
+
+      .usa-prose .usa-collection__item:first-child {
+        border-top: 0;
+        padding-top: 0;
+      }
+
+      .usa-hint {
+        color: black;
+        font-style: italic;
+      }
+
+      .usa-list {
+        padding-left: 20px;
+      }
+
+      .usa-list li {
+        margin-bottom: 0;
+        max-width: none;
+      }
+
+      h3.usa-collection__heading {
+        font-size: 1.4rem;
+      }
+
+      .usa-input.margin-left-4 {
+        width: calc(100% - 2rem);
+      }
+
+      .grid-container,
+      .usa-form {
+        max-width: 46rem;
+      }
+
+      .display-none {
+        display: none !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="usa-prose">
+      <div class="grid-container margin-top-8">
+        <form action="thanks.html">
+          <h1>Sample data collection form</h1>
+
+          <p>Federal law requires that we request the following information to help ensure that all small businesses applying for loans and other kinds of credit are treated fairly and that communities' small business credit needs are met.</p>
+
+          <p>One or more employees or officers involved in making a determination concerning your application may have access to the information provided on this form.</p>
+
+          <ul class="usa-list margin-top-2 margin-bottom-3">
+            <li>However, <strong>FEDERAL LAW PROHIBITS DISCRIMINATION</strong> on the basis of your answers on this form.</li>
+            <li>Additionally, we cannot discriminate on the basis of whether you provide this information.</li>
+            <li>While you are not required to provide this information, we encourage you to do so.</li>
+            <li>Importantly, our staff are not permitted to discourage you in any way from responding to these questions.</li>
+          </ul>
+
+          <p>
+            <strong>Filling out this form will help to ensure that ALL small business owners are treated fairly.</strong>
+          </p>
+
+          <h2 class="margin-top-8 margin-bottom-2">Business ownership status</h2>
+
+          <p>Please indicate the business ownership status of your small business. For the purposes of this form, your business is a minority-owned, women-owned, or LGBTQI+-owned business if one or more minorities,* women, or LGBTQI+ individuals (i) directly or indirectly own or control more than 50 percent of the business AND (ii) receive more than 50 percent of the net profits/losses of the business.</p>
+
+          <fieldset class="usa-fieldset">
+            <legend class="usa-legend usa-legend--medium">What is your business ownership status?</legend>
+            <div class="usa-hint margin-bottom-3">(Check one or more of the options below)</div>
+            <div class="usa-checkbox">
+              <input class="usa-checkbox__input" id="business-owner-minority" type="checkbox" name="business-owner-minority" value="business-owner-minority" />
+              <label class="usa-checkbox__label" for="business-owner-minority"><strong>Minority-owned business</strong></label>
+            </div>
+            <div class="usa-checkbox">
+              <input class="usa-checkbox__input" id="business-owner-women" type="checkbox" name="business-owner-women" value="business-owner-women" />
+              <label class="usa-checkbox__label" for="business-owner-women"><strong>Women-owned business</strong></label>
+            </div>
+            <div class="usa-checkbox">
+              <input class="usa-checkbox__input" id="business-owner-lgbtqi" type="checkbox" name="business-owner-lgbtqi" value="business-owner-lgbtqi" />
+              <label class="usa-checkbox__label" for="business-owner-lgbtqi"><strong>LGBTQI+-owned business</strong></label>
+            </div>
+            <p class="margin-y-1"><i>&mdash; or &mdash;</i></p>
+            <div class="usa-checkbox">
+              <input class="usa-checkbox__input decline" id="business-owner-none" type="checkbox" name="business-owner-none" value="business-owner-none" />
+              <label class="usa-checkbox__label" for="business-owner-none"><strong>None of these apply</strong></label>
+            </div>
+            <p class="margin-y-1"><i>&mdash; or &mdash;</i></p>
+            <div class="usa-checkbox">
+              <input class="usa-checkbox__input decline" id="business-owner-decline" type="checkbox" name="business-owner-decline" value="business-owner-decline" />
+              <label class="usa-checkbox__label" for="business-owner-decline"><strong>I do not wish to provide this information</strong></label>
+            </div>
+          </fieldset>
+
+          <p class="margin-top-4">*Minority means Hispanic or Latino, American Indian or Alaska Native, Asian, Black or African American, or Native Hawaiian or Other Pacific Islander. A multi-racial or multi-ethnic individual is a minority for this purpose.</p>
+
+          <h2 class="margin-top-8 margin-bottom-2">Number of principal owners</h2>
+
+          <p>For the purposes of this form, a principal owner is any individual who owns 25 percent or more of the equity interest of a business. A business might not have any principal owners if, for example, it is not directly owned by any individuals (i.e., if it is not owned by another entity or entities) or if no individual directly owns at least 25 percent of the business.</p>
+
+          <label class="usa-label usa-label--medium margin-top-4" for="owners-count">How many principal owners does your business have?</label>
+          <select class="usa-select" name="options" id="owners-count">
+            <option value>Select an answer</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+
+          <div id="owner-demographics" class="display-none">
+            <h2 class="margin-top-8 margin-bottom-2">Demographic information about principal owners</h2>
+
+            <p>As a reminder, applicants are not required to provide this information but are encouraged to do so. We cannot discriminate on the basis of any person's ethnicity, race, or sex/gender. Additionally, we cannot discriminate on the basis of whether you provide this information.</p>
+
+            <ul class="usa-collection">
+              <li class="usa-collection__item principal-owner display-none" id="principal-owner-1">
+                <div class="usa-collection__body">
+                  <h3 class="usa-collection__heading">Principal owner 1</h3>
+                  <div class="usa-collection__description">
+                    <fieldset class="usa-fieldset">
+                      <legend class="usa-legend usa-legend--medium">1. Are you Hispanic or Latino?</legend>
+                      <div class="usa-hint margin-bottom-4">i.e., What's your ethnicity? (Check one or more)</div>
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input" id="principal-owner-1-hispanic" type="checkbox" name="principal-owner-1-hispanic" value="principal-owner-1-hispanic" />
+                        <label class="usa-checkbox__label" for="principal-owner-1-hispanic"><strong>Hispanic or Latino</strong></label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-1-cuban" type="checkbox" name="principal-owner-1-cuban" value="principal-owner-1-cuban" />
+                        <label class="usa-checkbox__label" for="principal-owner-1-cuban">Cuban</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-1-mexican" type="checkbox" name="principal-owner-1-mexican" value="principal-owner-1-mexican" />
+                        <label class="usa-checkbox__label" for="principal-owner-1-mexican">Mexican</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-1-puerto-rican" type="checkbox" name="principal-owner-1-puerto-rican" value="principal-owner-1-puerto-rican" />
+                        <label class="usa-checkbox__label" for="principal-owner-1-puerto-rican">Puerto Rican</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-1-other-hispanic" type="checkbox" name="principal-owner-1-other-hispanic" value="principal-owner-1-other-hispanic" />
+                        <label class="usa-checkbox__label" for="principal-owner-1-other-hispanic" id="principal-owner-1-other-hispanic-label">Other Hispanic or Latino <i>(Please specify your origin, for example, Argentinean, Colombian, Dominican, Nicaraguan, Salvadoran, Spaniard, and so on)</i>:</label>
+                        <input class="usa-input margin-left-4" id="principal-owner-1-hispanic-user-provided" name="principal-owner-1-hispanic-user-provided" aria-labelledby="principal-owner-1-other-hispanic-label" />
+                      </div>
+
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input" id="principal-owner-1-not-hispanic" type="checkbox" name="principal-owner-1-not-hispanic" value="principal-owner-1-not-hispanic" />
+                        <label class="usa-checkbox__label" for="principal-owner-1-not-hispanic"><strong>Not Hispanic or Latino</strong></label>
+                      </div>
+
+                      <p class="margin-y-1"><i>&mdash; or &mdash;</i></p>
+
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input decline" id="principal-owner-1-ethnicity-decline" type="checkbox" name="principal-owner-1-ethnicity-decline" value="principal-owner-1-ethnicity-decline" />
+                        <label class="usa-checkbox__label" for="principal-owner-1-ethnicity-decline"><strong>I do not wish to provide my ethnicity</strong></label>
+                      </div>
+                    </fieldset>
+
+                    <fieldset class="usa-fieldset">
+                      <legend class="usa-legend usa-legend--medium">2. What is your sex/gender?</legend>
+                      <label class="usa-hint" for="principal-owner-1-sex">(Please specify):</label>
+                      <input class="usa-input" id="principal-owner-1-sex" name="principal-owner-1-sex" />
+
+                      <p class="margin-y-1"><i>&mdash; or &mdash;</i></p>
+
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input decline" id="principal-owner-1-sex-decline" type="checkbox" name="principal-owner-1-sex-decline" value="principal-owner-1-sex-decline" />
+                        <label class="usa-checkbox__label" for="principal-owner-1-sex-decline"><strong>I do not wish to provide my sex/gender</strong></label>
+                      </div>
+                    </fieldset>
+
+                    <fieldset class="usa-fieldset">
+                      <legend class="usa-legend usa-legend--medium">3. What is your race?</legend>
+                      <div class="usa-hint margin-bottom-4">(Check one or more)</div>
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input" id="principal-owner-1-american-indian" type="checkbox" name="principal-owner-1-american-indian" value="principal-owner-1-american-indian" />
+                        <label class="usa-checkbox__label" for="principal-owner-1-american-indian" id="principal-owner-1-american-indian-user-provided"><strong>American Indian or Alaska Native</strong> <i>(Please specify the name of your enrolled or principal tribe)</i>:</label>
+                        <input class="usa-input margin-left-4" aria-labelledby="principal-owner-1-american-indian-user-provided" />
+                      </div>
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input" id="principal-owner-1-asian" type="checkbox" name="principal-owner-1-asian" value="principal-owner-1-asian" />
+                        <label class="usa-checkbox__label" for="principal-owner-1-asian"><strong>Asian</strong></label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-1-asian-indian" type="checkbox" name="principal-owner-1-asian-indian" value="principal-owner-1-asian-indian" />
+                        <label class="usa-checkbox__label" for="principal-owner-1-asian-indian">Asian Indian</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-1-chinese" type="checkbox" name="principal-owner-1-chinese" value="principal-owner-1-chinese" />
+                        <label class="usa-checkbox__label" for="principal-owner-1-chinese">Chinese</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-1-filipino" type="checkbox" name="principal-owner-1-filipino" value="principal-owner-1-filipino" />
+                        <label class="usa-checkbox__label" for="principal-owner-1-filipino">Filipino</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-1-japanese" type="checkbox" name="principal-owner-1-japanese" value="principal-owner-1-japanese" />
+                        <label class="usa-checkbox__label" for="principal-owner-1-japanese">Japanese</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-1-korean" type="checkbox" name="principal-owner-1-korean" value="principal-owner-1-korean" />
+                        <label class="usa-checkbox__label" for="principal-owner-1-korean">Korean</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-1-vietnamese" type="checkbox" name="principal-owner-1-vietnamese" value="principal-owner-1-vietnamese" />
+                        <label class="usa-checkbox__label" for="principal-owner-1-vietnamese">Vietnamese</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-1-other-asian" type="checkbox" name="principal-owner-1-other-asian" value="principal-owner-1-other-asian" />
+                        <label class="usa-checkbox__label" for="principal-owner-1-other-asian" id="principal-owner-1-other-asian-label">Other Asian <i>(Please specify your race, for example, Cambodian, Hmong, Laotian, Pakistani, Thai, and so on)</i>:</label>
+                        <input class="usa-input margin-left-4" id="principal-owner-1-asian-user-provided" name="principal-owner-1-asian-user-provided" aria-labelledby="principal-owner-1-other-asian-label" />
+                      </div>
+
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input" id="principal-owner-1-black" type="checkbox" name="principal-owner-1-black" value="principal-owner-1-black" />
+                        <label class="usa-checkbox__label" for="principal-owner-1-black"><strong>Black or African American</strong></label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-1-african-american" type="checkbox" name="principal-owner-1-african-american" value="principal-owner-1-african-american" />
+                        <label class="usa-checkbox__label" for="principal-owner-1-african-american">African American</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-1-ethiopian" type="checkbox" name="principal-owner-1-ethiopian" value="principal-owner-1-ethiopian" />
+                        <label class="usa-checkbox__label" for="principal-owner-1-ethiopian">Ethiopian</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-1-haitian" type="checkbox" name="principal-owner-1-haitian" value="principal-owner-1-haitian" />
+                        <label class="usa-checkbox__label" for="principal-owner-1-haitian">Haitian</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-1-jamaican" type="checkbox" name="principal-owner-1-jamaican" value="principal-owner-1-jamaican" />
+                        <label class="usa-checkbox__label" for="principal-owner-1-jamaican">Jamaican</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-1-nigerian" type="checkbox" name="principal-owner-1-nigerian" value="principal-owner-1-nigerian" />
+                        <label class="usa-checkbox__label" for="principal-owner-1-nigerian">Nigerian</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-1-somali" type="checkbox" name="principal-owner-1-somali" value="principal-owner-1-somali" />
+                        <label class="usa-checkbox__label" for="principal-owner-1-somali">Somali</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-1-other-black" type="checkbox" name="principal-owner-1-other-black" value="principal-owner-1-other-black" />
+                        <label class="usa-checkbox__label" for="principal-owner-1-other-black" id="principal-owner-1-other-black-label">Other Black or African American <i>(Please specify your race, for example, Barbadian, Ghanaian, South African, and so on)</i>:</label>
+                        <input class="usa-input margin-left-4" id="principal-owner-1-other-black-user-provided" name="principal-owner-1-other-black-user-provided" aria-labelledby="principal-owner-1-other-black-label" />
+                      </div>
+
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input" id="principal-owner-1-pacific-islander" type="checkbox" name="principal-owner-1-pacific-islander" value="principal-owner-1-pacific-islander" />
+                        <label class="usa-checkbox__label" for="principal-owner-1-pacific-islander"><strong>Native Hawaiian or Other Pacific Islander</strong></label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-1-guamanian" type="checkbox" name="principal-owner-1-guamanian" value="principal-owner-1-guamanian" />
+                        <label class="usa-checkbox__label" for="principal-owner-1-guamanian">Guamanian or Chamorro</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-1-hawaiian" type="checkbox" name="principal-owner-1-hawaiian" value="principal-owner-1-hawaiian" />
+                        <label class="usa-checkbox__label" for="principal-owner-1-hawaiian">Native Hawaiian</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-1-samoan" type="checkbox" name="principal-owner-1-samoan" value="principal-owner-1-samoan" />
+                        <label class="usa-checkbox__label" for="principal-owner-1-samoan">Samoan</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-1-other-pacific-islander" type="checkbox" name="principal-owner-1-other-pacific-islander" value="principal-owner-1-other-pacific-islander" />
+                        <label class="usa-checkbox__label" for="principal-owner-1-other-pacific-islander" id="principal-owner-1-other-pacific-islander-label">Other Pacific Islander <i>(Please specify your race, for example, Fijian, Tongan, and so on)</i>:</label>
+                        <input class="usa-input margin-left-4" id="principal-owner-1-pacific-islander-user-provided" name="principal-owner-1-pacific-islander-user-provided" aria-labelledby="principal-owner-1-other-pacific-islander-label" />
+                      </div>
+
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input" id="principal-owner-1-white" type="checkbox" name="principal-owner-1-white" value="principal-owner-1-white" />
+                        <label class="usa-checkbox__label" for="principal-owner-1-white"><strong>White</strong></label>
+                      </div>
+
+                      <p class="margin-y-1"><i>&mdash; or &mdash;</i></p>
+
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input decline" id="principal-owner-1-race-decline" type="checkbox" name="principal-owner-1-race-decline" value="principal-owner-1-race-decline" />
+                        <label class="usa-checkbox__label" for="principal-owner-1-race-decline"><strong>I do not wish to provide my race</strong></label>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+              </li>
+              <li class="usa-collection__item principal-owner display-none" id="principal-owner-2">
+                <div class="usa-collection__body">
+                  <h3 class="usa-collection__heading">Principal owner 2</h3>
+                  <div class="usa-collection__description">
+                    <fieldset class="usa-fieldset">
+                      <legend class="usa-legend usa-legend--medium">1. Are you Hispanic or Latino?</legend>
+                      <div class="usa-hint margin-bottom-4">i.e., What's your ethnicity? (Check one or more)</div>
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input" id="principal-owner-2-hispanic" type="checkbox" name="principal-owner-2-hispanic" value="principal-owner-2-hispanic" />
+                        <label class="usa-checkbox__label" for="principal-owner-2-hispanic"><strong>Hispanic or Latino</strong></label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-2-cuban" type="checkbox" name="principal-owner-2-cuban" value="principal-owner-2-cuban" />
+                        <label class="usa-checkbox__label" for="principal-owner-2-cuban">Cuban</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-2-mexican" type="checkbox" name="principal-owner-2-mexican" value="principal-owner-2-mexican" />
+                        <label class="usa-checkbox__label" for="principal-owner-2-mexican">Mexican</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-2-puerto-rican" type="checkbox" name="principal-owner-2-puerto-rican" value="principal-owner-2-puerto-rican" />
+                        <label class="usa-checkbox__label" for="principal-owner-2-puerto-rican">Puerto Rican</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-2-other-hispanic" type="checkbox" name="principal-owner-2-other-hispanic" value="principal-owner-2-other-hispanic" />
+                        <label class="usa-checkbox__label" for="principal-owner-2-other-hispanic" id="principal-owner-2-other-hispanic-label">Other Hispanic or Latino <i>(Please specify your origin, for example, Argentinean, Colombian, Dominican, Nicaraguan, Salvadoran, Spaniard, and so on)</i>:</label>
+                        <input class="usa-input margin-left-4" id="principal-owner-2-hispanic-user-provided" name="principal-owner-2-hispanic-user-provided" aria-labelledby="principal-owner-2-other-hispanic-label" />
+                      </div>
+
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input" id="principal-owner-2-not-hispanic" type="checkbox" name="principal-owner-2-not-hispanic" value="principal-owner-2-not-hispanic" />
+                        <label class="usa-checkbox__label" for="principal-owner-2-not-hispanic"><strong>Not Hispanic or Latino</strong></label>
+                      </div>
+
+                      <p class="margin-y-1"><i>&mdash; or &mdash;</i></p>
+
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input decline" id="principal-owner-2-ethnicity-decline" type="checkbox" name="principal-owner-2-ethnicity-decline" value="principal-owner-2-ethnicity-decline" />
+                        <label class="usa-checkbox__label" for="principal-owner-2-ethnicity-decline"><strong>I do not wish to provide my ethnicity</strong></label>
+                      </div>
+                    </fieldset>
+
+                    <fieldset class="usa-fieldset">
+                      <legend class="usa-legend usa-legend--medium">2. What is your sex/gender?</legend>
+                      <label class="usa-hint" for="principal-owner-2-sex">(Please specify):</label>
+                      <input class="usa-input" id="principal-owner-2-sex" name="principal-owner-2-sex" />
+
+                      <p class="margin-y-1"><i>&mdash; or &mdash;</i></p>
+
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input decline" id="principal-owner-2-sex-decline" type="checkbox" name="principal-owner-2-sex-decline" value="principal-owner-2-sex-decline" />
+                        <label class="usa-checkbox__label" for="principal-owner-2-sex-decline"><strong>I do not wish to provide my sex/gender</strong></label>
+                      </div>
+                    </fieldset>
+
+                    <fieldset class="usa-fieldset">
+                      <legend class="usa-legend usa-legend--medium">3. What is your race?</legend>
+                      <div class="usa-hint margin-bottom-4">(Check one or more)</div>
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input" id="principal-owner-2-american-indian" type="checkbox" name="principal-owner-2-american-indian" value="principal-owner-2-american-indian" />
+                        <label class="usa-checkbox__label" for="principal-owner-2-american-indian" id="principal-owner-2-american-indian-user-provided"><strong>American Indian or Alaska Native</strong> <i>(Please specify the name of your enrolled or principal tribe)</i>:</label>
+                        <input class="usa-input margin-left-4" aria-labelledby="principal-owner-2-american-indian-user-provided" />
+                      </div>
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input" id="principal-owner-2-asian" type="checkbox" name="principal-owner-2-asian" value="principal-owner-2-asian" />
+                        <label class="usa-checkbox__label" for="principal-owner-2-asian"><strong>Asian</strong></label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-2-asian-indian" type="checkbox" name="principal-owner-2-asian-indian" value="principal-owner-2-asian-indian" />
+                        <label class="usa-checkbox__label" for="principal-owner-2-asian-indian">Asian Indian</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-2-chinese" type="checkbox" name="principal-owner-2-chinese" value="principal-owner-2-chinese" />
+                        <label class="usa-checkbox__label" for="principal-owner-2-chinese">Chinese</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-2-filipino" type="checkbox" name="principal-owner-2-filipino" value="principal-owner-2-filipino" />
+                        <label class="usa-checkbox__label" for="principal-owner-2-filipino">Filipino</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-2-japanese" type="checkbox" name="principal-owner-2-japanese" value="principal-owner-2-japanese" />
+                        <label class="usa-checkbox__label" for="principal-owner-2-japanese">Japanese</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-2-korean" type="checkbox" name="principal-owner-2-korean" value="principal-owner-2-korean" />
+                        <label class="usa-checkbox__label" for="principal-owner-2-korean">Korean</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-2-vietnamese" type="checkbox" name="principal-owner-2-vietnamese" value="principal-owner-2-vietnamese" />
+                        <label class="usa-checkbox__label" for="principal-owner-2-vietnamese">Vietnamese</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-2-other-asian" type="checkbox" name="principal-owner-2-other-asian" value="principal-owner-2-other-asian" />
+                        <label class="usa-checkbox__label" for="principal-owner-2-other-asian" id="principal-owner-2-other-asian-label">Other Asian <i>(Please specify your race, for example, Cambodian, Hmong, Laotian, Pakistani, Thai, and so on)</i>:</label>
+                        <input class="usa-input margin-left-4" id="principal-owner-2-asian-user-provided" name="principal-owner-2-asian-user-provided" aria-labelledby="principal-owner-2-other-asian-label" />
+                      </div>
+
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input" id="principal-owner-2-black" type="checkbox" name="principal-owner-2-black" value="principal-owner-2-black" />
+                        <label class="usa-checkbox__label" for="principal-owner-2-black"><strong>Black or African American</strong></label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-2-african-american" type="checkbox" name="principal-owner-2-african-american" value="principal-owner-2-african-american" />
+                        <label class="usa-checkbox__label" for="principal-owner-2-african-american">African American</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-2-ethiopian" type="checkbox" name="principal-owner-2-ethiopian" value="principal-owner-2-ethiopian" />
+                        <label class="usa-checkbox__label" for="principal-owner-2-ethiopian">Ethiopian</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-2-haitian" type="checkbox" name="principal-owner-2-haitian" value="principal-owner-2-haitian" />
+                        <label class="usa-checkbox__label" for="principal-owner-2-haitian">Haitian</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-2-jamaican" type="checkbox" name="principal-owner-2-jamaican" value="principal-owner-2-jamaican" />
+                        <label class="usa-checkbox__label" for="principal-owner-2-jamaican">Jamaican</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-2-nigerian" type="checkbox" name="principal-owner-2-nigerian" value="principal-owner-2-nigerian" />
+                        <label class="usa-checkbox__label" for="principal-owner-2-nigerian">Nigerian</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-2-somali" type="checkbox" name="principal-owner-2-somali" value="principal-owner-2-somali" />
+                        <label class="usa-checkbox__label" for="principal-owner-2-somali">Somali</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-2-other-black" type="checkbox" name="principal-owner-2-other-black" value="principal-owner-2-other-black" />
+                        <label class="usa-checkbox__label" for="principal-owner-2-other-black" id="principal-owner-2-other-black-label">Other Black or African American <i>(Please specify your race, for example, Barbadian, Ghanaian, South African, and so on)</i>:</label>
+                        <input class="usa-input margin-left-4" id="principal-owner-2-other-black-user-provided" name="principal-owner-2-other-black-user-provided" aria-labelledby="principal-owner-2-other-black-label" />
+                      </div>
+
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input" id="principal-owner-2-pacific-islander" type="checkbox" name="principal-owner-2-pacific-islander" value="principal-owner-2-pacific-islander" />
+                        <label class="usa-checkbox__label" for="principal-owner-2-pacific-islander"><strong>Native Hawaiian or Other Pacific Islander</strong></label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-2-guamanian" type="checkbox" name="principal-owner-2-guamanian" value="principal-owner-2-guamanian" />
+                        <label class="usa-checkbox__label" for="principal-owner-2-guamanian">Guamanian or Chamorro</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-2-hawaiian" type="checkbox" name="principal-owner-2-hawaiian" value="principal-owner-2-hawaiian" />
+                        <label class="usa-checkbox__label" for="principal-owner-2-hawaiian">Native Hawaiian</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-2-samoan" type="checkbox" name="principal-owner-2-samoan" value="principal-owner-2-samoan" />
+                        <label class="usa-checkbox__label" for="principal-owner-2-samoan">Samoan</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-2-other-pacific-islander" type="checkbox" name="principal-owner-2-other-pacific-islander" value="principal-owner-2-other-pacific-islander" />
+                        <label class="usa-checkbox__label" for="principal-owner-2-other-pacific-islander" id="principal-owner-2-other-pacific-islander-label">Other Pacific Islander <i>(Please specify your race, for example, Fijian, Tongan, and so on)</i>:</label>
+                        <input class="usa-input margin-left-4" id="principal-owner-2-pacific-islander-user-provided" name="principal-owner-2-pacific-islander-user-provided" aria-labelledby="principal-owner-2-other-pacific-islander-label" />
+                      </div>
+
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input" id="principal-owner-2-white" type="checkbox" name="principal-owner-2-white" value="principal-owner-2-white" />
+                        <label class="usa-checkbox__label" for="principal-owner-2-white"><strong>White</strong></label>
+                      </div>
+
+                      <p class="margin-y-1"><i>&mdash; or &mdash;</i></p>
+
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input decline" id="principal-owner-2-race-decline" type="checkbox" name="principal-owner-2-race-decline" value="principal-owner-2-race-decline" />
+                        <label class="usa-checkbox__label" for="principal-owner-2-race-decline"><strong>I do not wish to provide my race</strong></label>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+              </li>
+              <li class="usa-collection__item principal-owner display-none" id="principal-owner-3">
+                <div class="usa-collection__body">
+                  <h3 class="usa-collection__heading">Principal owner 3</h3>
+                  <div class="usa-collection__description">
+                    <fieldset class="usa-fieldset">
+                      <legend class="usa-legend usa-legend--medium">1. Are you Hispanic or Latino?</legend>
+                      <div class="usa-hint margin-bottom-4">i.e., What's your ethnicity? (Check one or more)</div>
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input" id="principal-owner-3-hispanic" type="checkbox" name="principal-owner-3-hispanic" value="principal-owner-3-hispanic" />
+                        <label class="usa-checkbox__label" for="principal-owner-3-hispanic"><strong>Hispanic or Latino</strong></label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-3-cuban" type="checkbox" name="principal-owner-3-cuban" value="principal-owner-3-cuban" />
+                        <label class="usa-checkbox__label" for="principal-owner-3-cuban">Cuban</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-3-mexican" type="checkbox" name="principal-owner-3-mexican" value="principal-owner-3-mexican" />
+                        <label class="usa-checkbox__label" for="principal-owner-3-mexican">Mexican</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-3-puerto-rican" type="checkbox" name="principal-owner-3-puerto-rican" value="principal-owner-3-puerto-rican" />
+                        <label class="usa-checkbox__label" for="principal-owner-3-puerto-rican">Puerto Rican</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-3-other-hispanic" type="checkbox" name="principal-owner-3-other-hispanic" value="principal-owner-3-other-hispanic" />
+                        <label class="usa-checkbox__label" for="principal-owner-3-other-hispanic" id="principal-owner-3-other-hispanic-label">Other Hispanic or Latino <i>(Please specify your origin, for example, Argentinean, Colombian, Dominican, Nicaraguan, Salvadoran, Spaniard, and so on)</i>:</label>
+                        <input class="usa-input margin-left-4" id="principal-owner-3-hispanic-user-provided" name="principal-owner-3-hispanic-user-provided" aria-labelledby="principal-owner-3-other-hispanic-label" />
+                      </div>
+
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input" id="principal-owner-3-not-hispanic" type="checkbox" name="principal-owner-3-not-hispanic" value="principal-owner-3-not-hispanic" />
+                        <label class="usa-checkbox__label" for="principal-owner-3-not-hispanic"><strong>Not Hispanic or Latino</strong></label>
+                      </div>
+
+                      <p class="margin-y-1"><i>&mdash; or &mdash;</i></p>
+
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input decline" id="principal-owner-3-ethnicity-decline" type="checkbox" name="principal-owner-3-ethnicity-decline" value="principal-owner-3-ethnicity-decline" />
+                        <label class="usa-checkbox__label" for="principal-owner-3-ethnicity-decline"><strong>I do not wish to provide my ethnicity</strong></label>
+                      </div>
+                    </fieldset>
+
+                    <fieldset class="usa-fieldset">
+                      <legend class="usa-legend usa-legend--medium">2. What is your sex/gender?</legend>
+                      <label class="usa-hint" for="principal-owner-3-sex">(Please specify):</label>
+                      <input class="usa-input" id="principal-owner-3-sex" name="principal-owner-3-sex" />
+
+                      <p class="margin-y-1"><i>&mdash; or &mdash;</i></p>
+
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input decline" id="principal-owner-3-sex-decline" type="checkbox" name="principal-owner-3-sex-decline" value="principal-owner-3-sex-decline" />
+                        <label class="usa-checkbox__label" for="principal-owner-3-sex-decline"><strong>I do not wish to provide my sex/gender</strong></label>
+                      </div>
+                    </fieldset>
+
+                    <fieldset class="usa-fieldset">
+                      <legend class="usa-legend usa-legend--medium">3. What is your race?</legend>
+                      <div class="usa-hint margin-bottom-4">(Check one or more)</div>
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input" id="principal-owner-3-american-indian" type="checkbox" name="principal-owner-3-american-indian" value="principal-owner-3-american-indian" />
+                        <label class="usa-checkbox__label" for="principal-owner-3-american-indian" id="principal-owner-3-american-indian-user-provided"><strong>American Indian or Alaska Native</strong> <i>(Please specify the name of your enrolled or principal tribe)</i>:</label>
+                        <input class="usa-input margin-left-4" aria-labelledby="principal-owner-3-american-indian-user-provided" />
+                      </div>
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input" id="principal-owner-3-asian" type="checkbox" name="principal-owner-3-asian" value="principal-owner-3-asian" />
+                        <label class="usa-checkbox__label" for="principal-owner-3-asian"><strong>Asian</strong></label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-3-asian-indian" type="checkbox" name="principal-owner-3-asian-indian" value="principal-owner-3-asian-indian" />
+                        <label class="usa-checkbox__label" for="principal-owner-3-asian-indian">Asian Indian</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-3-chinese" type="checkbox" name="principal-owner-3-chinese" value="principal-owner-3-chinese" />
+                        <label class="usa-checkbox__label" for="principal-owner-3-chinese">Chinese</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-3-filipino" type="checkbox" name="principal-owner-3-filipino" value="principal-owner-3-filipino" />
+                        <label class="usa-checkbox__label" for="principal-owner-3-filipino">Filipino</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-3-japanese" type="checkbox" name="principal-owner-3-japanese" value="principal-owner-3-japanese" />
+                        <label class="usa-checkbox__label" for="principal-owner-3-japanese">Japanese</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-3-korean" type="checkbox" name="principal-owner-3-korean" value="principal-owner-3-korean" />
+                        <label class="usa-checkbox__label" for="principal-owner-3-korean">Korean</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-3-vietnamese" type="checkbox" name="principal-owner-3-vietnamese" value="principal-owner-3-vietnamese" />
+                        <label class="usa-checkbox__label" for="principal-owner-3-vietnamese">Vietnamese</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-3-other-asian" type="checkbox" name="principal-owner-3-other-asian" value="principal-owner-3-other-asian" />
+                        <label class="usa-checkbox__label" for="principal-owner-3-other-asian" id="principal-owner-3-other-asian-label">Other Asian <i>(Please specify your race, for example, Cambodian, Hmong, Laotian, Pakistani, Thai, and so on)</i>:</label>
+                        <input class="usa-input margin-left-4" id="principal-owner-3-asian-user-provided" name="principal-owner-3-asian-user-provided" aria-labelledby="principal-owner-3-other-asian-label" />
+                      </div>
+
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input" id="principal-owner-3-black" type="checkbox" name="principal-owner-3-black" value="principal-owner-3-black" />
+                        <label class="usa-checkbox__label" for="principal-owner-3-black"><strong>Black or African American</strong></label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-3-african-american" type="checkbox" name="principal-owner-3-african-american" value="principal-owner-3-african-american" />
+                        <label class="usa-checkbox__label" for="principal-owner-3-african-american">African American</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-3-ethiopian" type="checkbox" name="principal-owner-3-ethiopian" value="principal-owner-3-ethiopian" />
+                        <label class="usa-checkbox__label" for="principal-owner-3-ethiopian">Ethiopian</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-3-haitian" type="checkbox" name="principal-owner-3-haitian" value="principal-owner-3-haitian" />
+                        <label class="usa-checkbox__label" for="principal-owner-3-haitian">Haitian</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-3-jamaican" type="checkbox" name="principal-owner-3-jamaican" value="principal-owner-3-jamaican" />
+                        <label class="usa-checkbox__label" for="principal-owner-3-jamaican">Jamaican</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-3-nigerian" type="checkbox" name="principal-owner-3-nigerian" value="principal-owner-3-nigerian" />
+                        <label class="usa-checkbox__label" for="principal-owner-3-nigerian">Nigerian</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-3-somali" type="checkbox" name="principal-owner-3-somali" value="principal-owner-3-somali" />
+                        <label class="usa-checkbox__label" for="principal-owner-3-somali">Somali</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-3-other-black" type="checkbox" name="principal-owner-3-other-black" value="principal-owner-3-other-black" />
+                        <label class="usa-checkbox__label" for="principal-owner-3-other-black" id="principal-owner-3-other-black-label">Other Black or African American <i>(Please specify your race, for example, Barbadian, Ghanaian, South African, and so on)</i>:</label>
+                        <input class="usa-input margin-left-4" id="principal-owner-3-other-black-user-provided" name="principal-owner-3-other-black-user-provided" aria-labelledby="principal-owner-3-other-black-label" />
+                      </div>
+
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input" id="principal-owner-3-pacific-islander" type="checkbox" name="principal-owner-3-pacific-islander" value="principal-owner-3-pacific-islander" />
+                        <label class="usa-checkbox__label" for="principal-owner-3-pacific-islander"><strong>Native Hawaiian or Other Pacific Islander</strong></label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-3-guamanian" type="checkbox" name="principal-owner-3-guamanian" value="principal-owner-3-guamanian" />
+                        <label class="usa-checkbox__label" for="principal-owner-3-guamanian">Guamanian or Chamorro</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-3-hawaiian" type="checkbox" name="principal-owner-3-hawaiian" value="principal-owner-3-hawaiian" />
+                        <label class="usa-checkbox__label" for="principal-owner-3-hawaiian">Native Hawaiian</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-3-samoan" type="checkbox" name="principal-owner-3-samoan" value="principal-owner-3-samoan" />
+                        <label class="usa-checkbox__label" for="principal-owner-3-samoan">Samoan</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-3-other-pacific-islander" type="checkbox" name="principal-owner-3-other-pacific-islander" value="principal-owner-3-other-pacific-islander" />
+                        <label class="usa-checkbox__label" for="principal-owner-3-other-pacific-islander" id="principal-owner-3-other-pacific-islander-label">Other Pacific Islander <i>(Please specify your race, for example, Fijian, Tongan, and so on)</i>:</label>
+                        <input class="usa-input margin-left-4" id="principal-owner-3-pacific-islander-user-provided" name="principal-owner-3-pacific-islander-user-provided" aria-labelledby="principal-owner-3-other-pacific-islander-label" />
+                      </div>
+
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input" id="principal-owner-3-white" type="checkbox" name="principal-owner-3-white" value="principal-owner-3-white" />
+                        <label class="usa-checkbox__label" for="principal-owner-3-white"><strong>White</strong></label>
+                      </div>
+
+                      <p class="margin-y-1"><i>&mdash; or &mdash;</i></p>
+
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input decline" id="principal-owner-3-race-decline" type="checkbox" name="principal-owner-3-race-decline" value="principal-owner-3-race-decline" />
+                        <label class="usa-checkbox__label" for="principal-owner-3-race-decline"><strong>I do not wish to provide my race</strong></label>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+              </li>
+              <li class="usa-collection__item principal-owner display-none" id="principal-owner-4">
+                <div class="usa-collection__body">
+                  <h3 class="usa-collection__heading">Principal owner 4</h3>
+                  <div class="usa-collection__description">
+                    <fieldset class="usa-fieldset">
+                      <legend class="usa-legend usa-legend--medium">1. Are you Hispanic or Latino?</legend>
+                      <div class="usa-hint margin-bottom-4">i.e., What's your ethnicity? (Check one or more)</div>
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input" id="principal-owner-4-hispanic" type="checkbox" name="principal-owner-4-hispanic" value="principal-owner-4-hispanic" />
+                        <label class="usa-checkbox__label" for="principal-owner-4-hispanic"><strong>Hispanic or Latino</strong></label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-4-cuban" type="checkbox" name="principal-owner-4-cuban" value="principal-owner-4-cuban" />
+                        <label class="usa-checkbox__label" for="principal-owner-4-cuban">Cuban</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-4-mexican" type="checkbox" name="principal-owner-4-mexican" value="principal-owner-4-mexican" />
+                        <label class="usa-checkbox__label" for="principal-owner-4-mexican">Mexican</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-4-puerto-rican" type="checkbox" name="principal-owner-4-puerto-rican" value="principal-owner-4-puerto-rican" />
+                        <label class="usa-checkbox__label" for="principal-owner-4-puerto-rican">Puerto Rican</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-4-other-hispanic" type="checkbox" name="principal-owner-4-other-hispanic" value="principal-owner-4-other-hispanic" />
+                        <label class="usa-checkbox__label" for="principal-owner-4-other-hispanic" id="principal-owner-4-other-hispanic-label">Other Hispanic or Latino <i>(Please specify your origin, for example, Argentinean, Colombian, Dominican, Nicaraguan, Salvadoran, Spaniard, and so on)</i>:</label>
+                        <input class="usa-input margin-left-4" id="principal-owner-4-hispanic-user-provided" name="principal-owner-4-hispanic-user-provided" aria-labelledby="principal-owner-4-other-hispanic-label" />
+                      </div>
+
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input" id="principal-owner-4-not-hispanic" type="checkbox" name="principal-owner-4-not-hispanic" value="principal-owner-4-not-hispanic" />
+                        <label class="usa-checkbox__label" for="principal-owner-4-not-hispanic"><strong>Not Hispanic or Latino</strong></label>
+                      </div>
+
+                      <p class="margin-y-1"><i>&mdash; or &mdash;</i></p>
+
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input decline" id="principal-owner-4-ethnicity-decline" type="checkbox" name="principal-owner-4-ethnicity-decline" value="principal-owner-4-ethnicity-decline" />
+                        <label class="usa-checkbox__label" for="principal-owner-4-ethnicity-decline"><strong>I do not wish to provide my ethnicity</strong></label>
+                      </div>
+                    </fieldset>
+
+                    <fieldset class="usa-fieldset">
+                      <legend class="usa-legend usa-legend--medium">2. What is your sex/gender?</legend>
+                      <label class="usa-hint" for="principal-owner-4-sex">(Please specify):</label>
+                      <input class="usa-input" id="principal-owner-4-sex" name="principal-owner-4-sex" />
+
+                      <p class="margin-y-1"><i>&mdash; or &mdash;</i></p>
+
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input decline" id="principal-owner-4-sex-decline" type="checkbox" name="principal-owner-4-sex-decline" value="principal-owner-4-sex-decline" />
+                        <label class="usa-checkbox__label" for="principal-owner-4-sex-decline"><strong>I do not wish to provide my sex/gender</strong></label>
+                      </div>
+                    </fieldset>
+
+                    <fieldset class="usa-fieldset">
+                      <legend class="usa-legend usa-legend--medium">3. What is your race?</legend>
+                      <div class="usa-hint margin-bottom-4">(Check one or more)</div>
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input" id="principal-owner-4-american-indian" type="checkbox" name="principal-owner-4-american-indian" value="principal-owner-4-american-indian" />
+                        <label class="usa-checkbox__label" for="principal-owner-4-american-indian" id="principal-owner-4-american-indian-user-provided"><strong>American Indian or Alaska Native</strong> <i>(Please specify the name of your enrolled or principal tribe)</i>:</label>
+                        <input class="usa-input margin-left-4" aria-labelledby="principal-owner-4-american-indian-user-provided" />
+                      </div>
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input" id="principal-owner-4-asian" type="checkbox" name="principal-owner-4-asian" value="principal-owner-4-asian" />
+                        <label class="usa-checkbox__label" for="principal-owner-4-asian"><strong>Asian</strong></label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-4-asian-indian" type="checkbox" name="principal-owner-4-asian-indian" value="principal-owner-4-asian-indian" />
+                        <label class="usa-checkbox__label" for="principal-owner-4-asian-indian">Asian Indian</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-4-chinese" type="checkbox" name="principal-owner-4-chinese" value="principal-owner-4-chinese" />
+                        <label class="usa-checkbox__label" for="principal-owner-4-chinese">Chinese</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-4-filipino" type="checkbox" name="principal-owner-4-filipino" value="principal-owner-4-filipino" />
+                        <label class="usa-checkbox__label" for="principal-owner-4-filipino">Filipino</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-4-japanese" type="checkbox" name="principal-owner-4-japanese" value="principal-owner-4-japanese" />
+                        <label class="usa-checkbox__label" for="principal-owner-4-japanese">Japanese</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-4-korean" type="checkbox" name="principal-owner-4-korean" value="principal-owner-4-korean" />
+                        <label class="usa-checkbox__label" for="principal-owner-4-korean">Korean</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-4-vietnamese" type="checkbox" name="principal-owner-4-vietnamese" value="principal-owner-4-vietnamese" />
+                        <label class="usa-checkbox__label" for="principal-owner-4-vietnamese">Vietnamese</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-4-other-asian" type="checkbox" name="principal-owner-4-other-asian" value="principal-owner-4-other-asian" />
+                        <label class="usa-checkbox__label" for="principal-owner-4-other-asian" id="principal-owner-4-other-asian-label">Other Asian <i>(Please specify your race, for example, Cambodian, Hmong, Laotian, Pakistani, Thai, and so on)</i>:</label>
+                        <input class="usa-input margin-left-4" id="principal-owner-4-asian-user-provided" name="principal-owner-4-asian-user-provided" aria-labelledby="principal-owner-4-other-asian-label" />
+                      </div>
+
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input" id="principal-owner-4-black" type="checkbox" name="principal-owner-4-black" value="principal-owner-4-black" />
+                        <label class="usa-checkbox__label" for="principal-owner-4-black"><strong>Black or African American</strong></label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-4-african-american" type="checkbox" name="principal-owner-4-african-american" value="principal-owner-4-african-american" />
+                        <label class="usa-checkbox__label" for="principal-owner-4-african-american">African American</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-4-ethiopian" type="checkbox" name="principal-owner-4-ethiopian" value="principal-owner-4-ethiopian" />
+                        <label class="usa-checkbox__label" for="principal-owner-4-ethiopian">Ethiopian</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-4-haitian" type="checkbox" name="principal-owner-4-haitian" value="principal-owner-4-haitian" />
+                        <label class="usa-checkbox__label" for="principal-owner-4-haitian">Haitian</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-4-jamaican" type="checkbox" name="principal-owner-4-jamaican" value="principal-owner-4-jamaican" />
+                        <label class="usa-checkbox__label" for="principal-owner-4-jamaican">Jamaican</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-4-nigerian" type="checkbox" name="principal-owner-4-nigerian" value="principal-owner-4-nigerian" />
+                        <label class="usa-checkbox__label" for="principal-owner-4-nigerian">Nigerian</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-4-somali" type="checkbox" name="principal-owner-4-somali" value="principal-owner-4-somali" />
+                        <label class="usa-checkbox__label" for="principal-owner-4-somali">Somali</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-4-other-black" type="checkbox" name="principal-owner-4-other-black" value="principal-owner-4-other-black" />
+                        <label class="usa-checkbox__label" for="principal-owner-4-other-black" id="principal-owner-4-other-black-label">Other Black or African American <i>(Please specify your race, for example, Barbadian, Ghanaian, South African, and so on)</i>:</label>
+                        <input class="usa-input margin-left-4" id="principal-owner-4-other-black-user-provided" name="principal-owner-4-other-black-user-provided" aria-labelledby="principal-owner-4-other-black-label" />
+                      </div>
+
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input" id="principal-owner-4-pacific-islander" type="checkbox" name="principal-owner-4-pacific-islander" value="principal-owner-4-pacific-islander" />
+                        <label class="usa-checkbox__label" for="principal-owner-4-pacific-islander"><strong>Native Hawaiian or Other Pacific Islander</strong></label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-4-guamanian" type="checkbox" name="principal-owner-4-guamanian" value="principal-owner-4-guamanian" />
+                        <label class="usa-checkbox__label" for="principal-owner-4-guamanian">Guamanian or Chamorro</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-4-hawaiian" type="checkbox" name="principal-owner-4-hawaiian" value="principal-owner-4-hawaiian" />
+                        <label class="usa-checkbox__label" for="principal-owner-4-hawaiian">Native Hawaiian</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-4-samoan" type="checkbox" name="principal-owner-4-samoan" value="principal-owner-4-samoan" />
+                        <label class="usa-checkbox__label" for="principal-owner-4-samoan">Samoan</label>
+                      </div>
+                      <div class="usa-checkbox margin-left-4">
+                        <input class="usa-checkbox__input" id="principal-owner-4-other-pacific-islander" type="checkbox" name="principal-owner-4-other-pacific-islander" value="principal-owner-4-other-pacific-islander" />
+                        <label class="usa-checkbox__label" for="principal-owner-4-other-pacific-islander" id="principal-owner-4-other-pacific-islander-label">Other Pacific Islander <i>(Please specify your race, for example, Fijian, Tongan, and so on)</i>:</label>
+                        <input class="usa-input margin-left-4" id="principal-owner-4-pacific-islander-user-provided" name="principal-owner-4-pacific-islander-user-provided" aria-labelledby="principal-owner-4-other-pacific-islander-label" />
+                      </div>
+
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input" id="principal-owner-4-white" type="checkbox" name="principal-owner-4-white" value="principal-owner-4-white" />
+                        <label class="usa-checkbox__label" for="principal-owner-4-white"><strong>White</strong></label>
+                      </div>
+
+                      <p class="margin-y-1"><i>&mdash; or &mdash;</i></p>
+
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input decline" id="principal-owner-4-race-decline" type="checkbox" name="principal-owner-4-race-decline" value="principal-owner-4-race-decline" />
+                        <label class="usa-checkbox__label" for="principal-owner-4-race-decline"><strong>I do not wish to provide my race</strong></label>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <button id="submit" type="submit" class="usa-button margin-top-4 margin-bottom-7">Submit</button>
+        </form>
+      </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uswds/3.4.1/js/uswds-init.min.js" integrity="sha512-O4/iaC7XNMEYqktWqYtH6Rg++++GZAdUMITJVzu0D1X4ckQyXHJOoC4SC4Ivwsr8YMTjhSnDxem0Ac62IQuG1w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+      // The below JavaScript adds demonstrative functionality to the form.
+      // It is not meant to be used in a production environment.
+      var ownersEl = document.querySelector("#owners-count");
+      var declineEls = document.querySelectorAll("input.decline");
+      var nonDeclineEls = document.querySelectorAll("input:not(.decline)");
+      var radioEls = document.querySelectorAll(".usa-radio label");
+
+      // Show/hide principal owner sections based on number of owners
+      ownersEl.addEventListener("change", function (event) {
+        hideAllOwners();
+        if (!event.target || !event.target.value) return;
+        var numOwners = parseInt(event.target.value) + 1;
+        while (--numOwners) {
+          showOwner(numOwners);
+          document.querySelector("#owner-demographics").classList.remove("display-none");
+        }
+      });
+
+      // Clear sibling fields when "I decline..." is checked
+      declineEls.forEach(function (input) {
+        input.addEventListener("change", (event) => {
+          if (event.target && event.target.value && event.target.checked) {
+            clearSiblingInputs(event.target);
+          }
+        });
+      });
+
+      // Clear sibling "I decline..." fields with other fields are checked
+      nonDeclineEls.forEach(function (input) {
+        input.addEventListener("change", (event) => {
+          if (event.target && event.target.value && event.target.checked) {
+            clearSiblingDeclineInputs(event.target);
+          }
+        });
+      });
+
+      // Add ability to deselect radio buttons
+      radioEls.forEach(function (label) {
+        label.addEventListener("click", function (event) {
+          var radio = event.target.getAttribute("for");
+          radio = document.getElementById(radio);
+          if (radio.checked === true) {
+            // Slight delay for browser compatibility
+            setTimeout(function () {
+              radio.checked = false;
+            }, 10);
+          }
+        });
+      });
+
+      // Hide all principal owner sections
+      function hideAllOwners() {
+        document.querySelectorAll(".principal-owner").forEach(function (el) {
+          el.classList.add("display-none");
+        });
+        document.querySelector("#owner-demographics").classList.add("display-none");
+      }
+
+      // Show individual principal owner section
+      function showOwner(id) {
+        document.querySelector("#principal-owner-" + id).classList.remove("display-none");
+      }
+
+      // Clear a form field's sibling fields
+      function clearSiblingInputs(child) {
+        var container = child.closest("fieldset");
+        var inputs = container.querySelectorAll("input");
+        inputs.forEach(function (input) {
+          if (input.type === "checkbox" && input !== child) {
+            input.checked = false;
+          }
+          if (input.type === "text") {
+            input.value = "";
+          }
+        });
+      }
+
+      // Clear a form field's sibling "I decline..." fields
+      function clearSiblingDeclineInputs(child) {
+        var container = child.closest("fieldset");
+        var inputs = container.querySelectorAll("input.decline");
+        inputs.forEach(function (input) {
+          input.checked = false;
+        });
+      }
+    </script>
+  </body>
+</html>
