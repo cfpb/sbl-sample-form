@@ -37,7 +37,7 @@ The form’s HTML file contains code and design patterns from the [U.S. Web Desi
 ## Contributing
 
 We welcome your contributions! In particular, please let us know if any of the design templates we’ve provided aren’t working for you in any way. 
-The best way to do this is to [file an issue](https://github.come/cfpb/sbl-sample-form/issues/new) in this repository’s issue tracker.
+The best way to do this is to [file an issue](https://github.com/cfpb/sbl-sample-form/issues/new) in this repository’s issue tracker.
 
 For more details on how to contribute, please see our [CONTRIBUTING](CONTRIBUTING.md) file.
 
