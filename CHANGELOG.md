@@ -5,6 +5,7 @@ We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 ### Changed
 - added helper text under each "I do not wish to provide..." checkbox to indicate to a user that their previous selections for that section will be cleared when checked
+- typing into an "Other" free form text box now clears the "I do not wish to provide..." checkbox for that section, if typed in after the checkbox was clicked
 
 
 ## 1.0.0 – 2023-04-14
