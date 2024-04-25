@@ -912,7 +912,7 @@
         });
       });
 
-      // Clear sibling "I decline..." fields with other fields are checked or text inputted
+      // Clear sibling "I decline..." fields when other fields are checked or text inputted
       nonDeclineEls.forEach(function (input) {
         input.addEventListener("input", (event) => {
           if (event.target && event.target.value && event.target.value !== "") {
